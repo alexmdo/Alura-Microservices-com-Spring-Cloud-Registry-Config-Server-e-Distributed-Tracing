@@ -9,10 +9,16 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CompraService {
+
+    private RestTemplate client;
+
+    public CompraService(RestTemplate client) {
+        this.client = client;
+    }
+
     public void realizaCompra(CompraDTO compraDTO) {
-        RestTemplate client = new RestTemplate();
         ResponseEntity<InfoFornecedorDTO> infoFornecedorDTOResponseEntity = client
-                .exchange("http://localhost:8081/info/" + compraDTO.getEndereco().getEstado(),
+                .exchange("http://fornecedor/info/" + compraDTO.getEndereco().getEstado(),
                         HttpMethod.GET, null, InfoFornecedorDTO.class);
 
         System.out.println(infoFornecedorDTOResponseEntity.getBody().getEndereco());
