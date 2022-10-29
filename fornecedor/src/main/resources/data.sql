@@ -1,0 +1,1 @@
+insert into info_fornecedor (nome, estado, endereco) values ('Maria', 'GO', 'Endereco da Marai');
