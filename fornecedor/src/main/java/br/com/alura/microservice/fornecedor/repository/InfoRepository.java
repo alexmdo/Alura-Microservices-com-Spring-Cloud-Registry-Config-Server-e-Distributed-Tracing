@@ -1,4 +1,4 @@
-package br.com.alura.microservice.fornecedor.service;
+package br.com.alura.microservice.fornecedor.repository;
 
 import br.com.alura.microservice.fornecedor.model.InfoFornecedor;
 import org.springframework.data.repository.CrudRepository;

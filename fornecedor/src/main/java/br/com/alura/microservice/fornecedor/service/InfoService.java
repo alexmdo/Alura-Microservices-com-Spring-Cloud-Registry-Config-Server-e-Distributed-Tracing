@@ -1,6 +1,7 @@
 package br.com.alura.microservice.fornecedor.service;
 
 import br.com.alura.microservice.fornecedor.model.InfoFornecedor;
+import br.com.alura.microservice.fornecedor.repository.InfoRepository;
 import org.springframework.stereotype.Service;
 
 @Service

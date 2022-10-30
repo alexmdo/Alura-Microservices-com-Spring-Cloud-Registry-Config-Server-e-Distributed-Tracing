@@ -1,6 +1,7 @@
 package br.com.alura.microservice.loja.controller;
 
 import br.com.alura.microservice.loja.controller.dto.CompraDTO;
+import br.com.alura.microservice.loja.model.Compra;
 import br.com.alura.microservice.loja.service.CompraService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,8 @@ public class CompraController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void realizaCompra(@RequestBody CompraDTO compraDTO) {
-        compraService.realizaCompra(compraDTO);
+    public Compra realizaCompra(@RequestBody CompraDTO compraDTO) {
+        return compraService.realizaCompra(compraDTO);
     }
 
 }

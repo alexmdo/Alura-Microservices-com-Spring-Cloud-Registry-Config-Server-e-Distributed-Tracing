@@ -23,4 +23,6 @@ public class CompraDTO {
     public void setEndereco(EnderecoDTO endereco) {
         this.endereco = endereco;
     }
+
+
 }
